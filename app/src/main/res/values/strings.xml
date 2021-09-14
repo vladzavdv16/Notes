@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_notes">Добавить</string>
+    <string name="title_startFragment">Что использовать ?</string>
+    <string name="room_start_fragment">ROOM</string>
+    <string name="main_fragment_title">Заметки</string>
+    <string name="toast_enter_name">Введите имя заметки</string>
+    <string name="menu_delete">Удалить</string>
+</resources>
