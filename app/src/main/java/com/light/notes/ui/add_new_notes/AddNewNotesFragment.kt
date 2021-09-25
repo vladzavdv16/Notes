@@ -42,10 +42,12 @@ class AddNewNotesFragment : Fragment() {
             if (name.isEmpty()) {
                 showToast(getString(R.string.toast_enter_name))
             } else {
-                viewModel.insert(AppNote(name = name, text = text)){
+                viewModel.insert(AppNote(name = name, text = text)) {
+                    showToast("insert Firebase")
                     APP_ACTIVITY.navController.navigate(R.id.action_addNewFragment_to_mainFragment)
                 }
             }
+
         }
     }
 

@@ -8,4 +8,10 @@
     <string name="main_fragment_title">Заметки</string>
     <string name="toast_enter_name">Введите имя заметки</string>
     <string name="menu_delete">Удалить</string>
+    <string name="btn_login">Login</string>
+    <string name="toast_btn_firebase">Введите пароль и почту</string>
+    <string name="hint_email">email</string>
+    <string name="hint_password">password</string>
+    <string name="firebase_start_fragment">Firebase</string>
+    <string name="btn_exit">Выйти</string>
 </resources>

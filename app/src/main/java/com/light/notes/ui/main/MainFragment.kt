@@ -1,14 +1,13 @@
 package com.light.notes.ui.main
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.light.notes.model.AppNote
 import com.light.notes.utils.APP_ACTIVITY
+import com.light.notes.utils.AppPreference
 import com.light.notes.zavodov.R
 import com.light.notes.zavodov.databinding.FragmentMainBinding
 
@@ -45,7 +44,7 @@ class MainFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-
+        setHasOptionsMenu(true)
         initialization()
     }
 
@@ -60,6 +59,20 @@ class MainFragment : Fragment() {
         binding.fab.setOnClickListener {
             APP_ACTIVITY.navController.navigate(R.id.action_mainFragment_to_addNewFragment)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.exit_notes_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.btn_exit -> {
+                viewModel.signOut()
+                APP_ACTIVITY.navController.navigate(R.id.action_mainFragment_to_startFragment)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onDestroy() {

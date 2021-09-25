@@ -6,6 +6,7 @@ import android.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.light.notes.utils.APP_ACTIVITY
+import com.light.notes.utils.AppPreference
 import com.light.notes.zavodov.R
 import com.light.notes.zavodov.databinding.ActivityMainBinding
 
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             Navigation.findNavController(APP_ACTIVITY, R.id.nav_host_fragment)
         title = getString(R.string.main_fragment_title)
 
+        AppPreference.getPreference(this)
 
     }
 

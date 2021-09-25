@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:424940075266:android:6459dfd44c01a7a9a7ea1b",
+        "mobilesdk_app_id": "1:424940075266:android:1e8a08fd2919a9dba7ea1b",
         "android_client_info": {
-          "package_name": "com.light.notes"
+          "package_name": "com.light.notes.zavodov"
         }
       },
       "oauth_client": [
